@@ -1,9 +1,9 @@
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
   labels:
     app: nginx
+  name: nginx
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,5 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx-argo
-        image: manojjahgirdar/nginx-argo:v1
-        ports:
-        - containerPort: 8080
+      - image: manojjahgirdar/nginx-argo:v1
+        name: nginx-argo
