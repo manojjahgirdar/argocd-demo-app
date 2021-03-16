@@ -1,19 +1,21 @@
-apiVersion: apps/v1
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
+  name: otp-apis
   labels:
-    app: nginx
-  name: nginx-deployment
+    app: flask
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: flask
   template:
     metadata:
       labels:
-        app: nginx
+        app: flask
     spec:
       containers:
-      - image: manojjahgirdar/nginx-argo:v1
-        name: nginx
+      - name: otp-apis
+        image: manojjahgirdar/nginx-argo:v1
+        ports:
+        - containerPort: 8080
