@@ -7,6 +7,6 @@ spec:
   path: /
   to:
     kind: Service
-    name: nginx
+    name: nginx-service
   port:
     targetPort: 8080
