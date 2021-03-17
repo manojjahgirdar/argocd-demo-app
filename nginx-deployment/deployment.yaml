@@ -15,5 +15,5 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: manojjahgirdar/nginx-argo:v3
+      - image: manojjahgirdar/nginx-argo:v4
         name: nginx-argo
