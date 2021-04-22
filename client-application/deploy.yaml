@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: client-application
-        image: manojjahgirdar/client-application:v3.0
+        image: manojjahgirdar/client-application:v4.0
         ports:
         - containerPort: 8080
 
