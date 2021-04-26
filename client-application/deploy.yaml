@@ -15,7 +15,7 @@ spec:
         app: flask
     spec:
       containers:
-      - name: client-application
+      - name: t3-client
         image: manojjahgirdar/client-application:v10.0
         ports:
         - containerPort: 8080
