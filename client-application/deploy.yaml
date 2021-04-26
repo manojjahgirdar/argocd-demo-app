@@ -1,7 +1,7 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: client-application
+  name: t3-client
   namespace: demo
   labels:
     app: flask
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: client-application
-        image: manojjahgirdar/client-application:v6.0
+        image: manojjahgirdar/client-application:v10.0
         ports:
         - containerPort: 8080
 
@@ -25,7 +25,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: client-application-service
+  name: t3-client-service
   namespace: demo
 spec:
   selector:
